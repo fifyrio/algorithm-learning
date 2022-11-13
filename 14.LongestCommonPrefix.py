@@ -11,6 +11,7 @@ class Solution:
         res = ""
         for i in range(len(strs[0])):
             for s in strs:
+                # 不要漏了 第二个元素比第一个元素段的情况，使用数组index记得防止数组越界
                 if i == len(s) or s[i] != strs[0][i]:
                     return res                    
             res += strs[0][i]
